@@ -27,13 +27,13 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        setupLayout()
         setUpDummyCards()
     }
     
     // MARK:- Fileprivate
     
-    fileprivate func setUpUI() {
+    fileprivate func setupLayout() {
         let overallStackView = UIStackView(arrangedSubviews: [topView, cardDeckView, buttonStackView])
         overallStackView.axis = .vertical
         view.addSubview(overallStackView)
