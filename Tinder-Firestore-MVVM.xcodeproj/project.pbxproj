@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		341391C723068859002A5035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C623068859002A5035 /* AppDelegate.swift */; };
-		341391C923068859002A5035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C823068859002A5035 /* ViewController.swift */; };
+		341391C923068859002A5035 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C823068859002A5035 /* HomeController.swift */; };
 		341391CC23068859002A5035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341391CA23068859002A5035 /* Main.storyboard */; };
 		341391CE2306885A002A5035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341391CD2306885A002A5035 /* Assets.xcassets */; };
 		341391D12306885A002A5035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341391CF2306885A002A5035 /* LaunchScreen.storyboard */; };
@@ -16,12 +16,15 @@
 		341391DC230688F5002A5035 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */; };
 		341391DE2306890E002A5035 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391DD2306890E002A5035 /* CardView.swift */; };
 		341391E12306893F002A5035 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391E02306893F002A5035 /* Extension+UIView.swift */; };
+		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
+		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
+		34A1C99A230A50940029315D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1C999230A50940029315D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		341391C323068859002A5035 /* Tinder-Firestore-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-Firestore-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341391C623068859002A5035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		341391C823068859002A5035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		341391C823068859002A5035 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		341391CB23068859002A5035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		341391CD2306885A002A5035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341391D02306885A002A5035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		341391DD2306890E002A5035 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		341391E02306893F002A5035 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
+		34A1C999230A50940029315D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,12 @@
 		341391C523068859002A5035 /* Tinder-Firestore-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				341391DF23068926002A5035 /* Extensions */,
 				341391D8230688BD002A5035 /* Views */,
+				3419E6B2230A679700CE99B1 /* ViewModels */,
+				3419E6B1230A670200CE99B1 /* Controllers */,
+				34A1C998230A50860029315D /* Model */,
+				341391DF23068926002A5035 /* Extensions */,
 				341391C623068859002A5035 /* AppDelegate.swift */,
-				341391C823068859002A5035 /* ViewController.swift */,
 				341391CA23068859002A5035 /* Main.storyboard */,
 				341391CD2306885A002A5035 /* Assets.xcassets */,
 				341391CF2306885A002A5035 /* LaunchScreen.storyboard */,
@@ -90,6 +98,31 @@
 				341391E02306893F002A5035 /* Extension+UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3419E6B1230A670200CE99B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				341391C823068859002A5035 /* HomeController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3419E6B2230A679700CE99B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3419E6B3230A67A800CE99B1 /* CardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		34A1C998230A50860029315D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34A1C999230A50940029315D /* User.swift */,
+				3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +197,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				341391DA230688DE002A5035 /* TopNavigationStackView.swift in Sources */,
-				341391C923068859002A5035 /* ViewController.swift in Sources */,
+				341391C923068859002A5035 /* HomeController.swift in Sources */,
+				3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */,
 				341391E12306893F002A5035 /* Extension+UIView.swift in Sources */,
 				341391DC230688F5002A5035 /* HomeBottomControlStackView.swift in Sources */,
+				3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */,
 				341391C723068859002A5035 /* AppDelegate.swift in Sources */,
 				341391DE2306890E002A5035 /* CardView.swift in Sources */,
+				34A1C99A230A50940029315D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +359,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Tinder-Firestore-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -341,7 +377,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Tinder-Firestore-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
