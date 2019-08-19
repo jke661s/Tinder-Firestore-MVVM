@@ -48,6 +48,9 @@ class CardView: UIView {
     fileprivate func setupLayout() {
         layer.cornerRadius = 10
         clipsToBounds = true
+        
+        setupBarStackView()
+        
         imageView.contentMode = .scaleAspectFill
         addSubview(imageView)
         imageView.fillSuperView()
@@ -58,6 +61,13 @@ class CardView: UIView {
         informationLabel.setConstraint(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 16, right: 16))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
+    }
+    
+    fileprivate let barStackView = UIStackView()
+    
+    fileprivate func setupBarStackView() {
+        addSubview(barStackView)
+        barStackView.setConstraint(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 8, bottom: 0, right: 0), size: .init(width: 0, height: 4))
     }
     
     fileprivate func setupGradientLayer() {
