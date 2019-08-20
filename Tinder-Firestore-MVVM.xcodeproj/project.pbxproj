@@ -16,6 +16,9 @@
 		341391DC230688F5002A5035 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */; };
 		341391DE2306890E002A5035 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391DD2306890E002A5035 /* CardView.swift */; };
 		341391E12306893F002A5035 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391E02306893F002A5035 /* Extension+UIView.swift */; };
+		3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFB5230B778C003799E0 /* RegistrationController.swift */; };
+		3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFB7230B8256003799E0 /* CustomTextField.swift */; };
+		3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */; };
 		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
 		34A1C99A230A50940029315D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1C999230A50940029315D /* User.swift */; };
@@ -33,6 +36,9 @@
 		341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		341391DD2306890E002A5035 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		341391E02306893F002A5035 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		3415AFB5230B778C003799E0 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		3415AFB7230B8256003799E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		34A1C999230A50940029315D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				341391D9230688DD002A5035 /* TopNavigationStackView.swift */,
 				341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */,
 				341391DD2306890E002A5035 /* CardView.swift */,
+				3415AFB7230B8256003799E0 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				341391C823068859002A5035 /* HomeController.swift */,
+				3415AFB5230B778C003799E0 /* RegistrationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3419E6B3230A67A800CE99B1 /* CardViewModel.swift */,
+				3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				341391DA230688DE002A5035 /* TopNavigationStackView.swift in Sources */,
+				3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */,
+				3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */,
 				341391C923068859002A5035 /* HomeController.swift in Sources */,
 				3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */,
 				341391E12306893F002A5035 /* Extension+UIView.swift in Sources */,
@@ -204,6 +215,7 @@
 				3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */,
 				341391C723068859002A5035 /* AppDelegate.swift in Sources */,
 				341391DE2306890E002A5035 /* CardView.swift in Sources */,
+				3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */,
 				34A1C99A230A50940029315D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

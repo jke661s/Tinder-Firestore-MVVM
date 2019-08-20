@@ -28,10 +28,16 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        topView.settingButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         setUpDummyCards()
     }
     
     // MARK:- Fileprivate
+    
+    @objc fileprivate func handleSettings() {
+        let registrationController = RegistrationController()
+        present(registrationController, animated: true)
+    }
     
     fileprivate func setupLayout() {
         let overallStackView = UIStackView(arrangedSubviews: [topView, cardDeckView, buttonStackView])
