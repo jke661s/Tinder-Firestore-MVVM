@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026D86239008BD6A158C12DD /* Pods_Tinder_Firestore_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037C95D2B2F352F72B76C0D8 /* Pods_Tinder_Firestore_MVVM.framework */; };
 		341391C723068859002A5035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C623068859002A5035 /* AppDelegate.swift */; };
 		341391C923068859002A5035 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C823068859002A5035 /* HomeController.swift */; };
 		341391CC23068859002A5035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341391CA23068859002A5035 /* Main.storyboard */; };
@@ -19,12 +20,14 @@
 		3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFB5230B778C003799E0 /* RegistrationController.swift */; };
 		3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFB7230B8256003799E0 /* CustomTextField.swift */; };
 		3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */; };
+		3415AFBE230BCBAF003799E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */; };
 		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
 		34A1C99A230A50940029315D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1C999230A50940029315D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		037C95D2B2F352F72B76C0D8 /* Pods_Tinder_Firestore_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_Firestore_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		341391C323068859002A5035 /* Tinder-Firestore-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-Firestore-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341391C623068859002A5035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341391C823068859002A5035 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -39,9 +42,12 @@
 		3415AFB5230B778C003799E0 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		3415AFB7230B8256003799E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		34A1C999230A50940029315D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		53BA764CD8D0213BE95DE470 /* Pods-Tinder-Firestore-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		D3D85C25544D508DB2CB5656 /* Pods-Tinder-Firestore-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026D86239008BD6A158C12DD /* Pods_Tinder_Firestore_MVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +67,8 @@
 			children = (
 				341391C523068859002A5035 /* Tinder-Firestore-MVVM */,
 				341391C423068859002A5035 /* Products */,
+				8136578822E056B7F21BD20B /* Pods */,
+				97A83B9AA8082DB920EC9342 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +93,7 @@
 				341391CD2306885A002A5035 /* Assets.xcassets */,
 				341391CF2306885A002A5035 /* LaunchScreen.storyboard */,
 				341391D22306885A002A5035 /* Info.plist */,
+				3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */,
 			);
 			path = "Tinder-Firestore-MVVM";
 			sourceTree = "<group>";
@@ -134,6 +144,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8136578822E056B7F21BD20B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53BA764CD8D0213BE95DE470 /* Pods-Tinder-Firestore-MVVM.debug.xcconfig */,
+				D3D85C25544D508DB2CB5656 /* Pods-Tinder-Firestore-MVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		97A83B9AA8082DB920EC9342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				037C95D2B2F352F72B76C0D8 /* Pods_Tinder_Firestore_MVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 341391D52306885A002A5035 /* Build configuration list for PBXNativeTarget "Tinder-Firestore-MVVM" */;
 			buildPhases = (
+				A9FF3B677487E7F5FF76F3C8 /* [CP] Check Pods Manifest.lock */,
 				341391BF23068859002A5035 /* Sources */,
 				341391C023068859002A5035 /* Frameworks */,
 				341391C123068859002A5035 /* Resources */,
+				DE068E124258181982A48460 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,12 +222,84 @@
 			buildActionMask = 2147483647;
 			files = (
 				341391D12306885A002A5035 /* LaunchScreen.storyboard in Resources */,
+				3415AFBE230BCBAF003799E0 /* GoogleService-Info.plist in Resources */,
 				341391CE2306885A002A5035 /* Assets.xcassets in Resources */,
 				341391CC23068859002A5035 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9FF3B677487E7F5FF76F3C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tinder-Firestore-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE068E124258181982A48460 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		341391BF23068859002A5035 /* Sources */ = {
@@ -360,6 +461,7 @@
 		};
 		341391D62306885A002A5035 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53BA764CD8D0213BE95DE470 /* Pods-Tinder-Firestore-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +480,7 @@
 		};
 		341391D72306885A002A5035 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D85C25544D508DB2CB5656 /* Pods-Tinder-Firestore-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

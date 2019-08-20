@@ -6,7 +6,7 @@
 //  Copyright © 2019 iOS dev. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class RegistrationViewModel {
     

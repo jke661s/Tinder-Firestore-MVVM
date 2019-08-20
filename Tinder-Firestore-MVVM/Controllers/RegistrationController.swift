@@ -10,6 +10,8 @@ import UIKit
 
 class RegistrationController: UIViewController {
     
+    let registrationViewModel = RegistrationViewModel()
+    
     // UI Components
     let selectPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -53,12 +55,12 @@ class RegistrationController: UIViewController {
         button.setTitle("Register", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-//        button.backgroundColor = #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1)
         button.backgroundColor = .lightGray
         button.setTitleColor(.gray, for: .disabled)
         button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 44).isActive = true
         button.layer.cornerRadius = 22
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
 
@@ -97,7 +99,9 @@ class RegistrationController: UIViewController {
     
     // MARK:- Private
     
-    let registrationViewModel = RegistrationViewModel()
+    @objc fileprivate func handleRegister() {
+        
+        }
     
     fileprivate func setupRegistrationViewModelObserver() {
         registrationViewModel.isFormValidObserver = { [weak self] (isFormValid) in
