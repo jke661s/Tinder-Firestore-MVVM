@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		026D86239008BD6A158C12DD /* Pods_Tinder_Firestore_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037C95D2B2F352F72B76C0D8 /* Pods_Tinder_Firestore_MVVM.framework */; };
+		34070A7F230E0E38006FB397 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34070A7E230E0E38006FB397 /* SettingsController.swift */; };
 		341391C723068859002A5035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C623068859002A5035 /* AppDelegate.swift */; };
 		341391C923068859002A5035 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341391C823068859002A5035 /* HomeController.swift */; };
 		341391CC23068859002A5035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341391CA23068859002A5035 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		037C95D2B2F352F72B76C0D8 /* Pods_Tinder_Firestore_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_Firestore_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34070A7E230E0E38006FB397 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		341391C323068859002A5035 /* Tinder-Firestore-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-Firestore-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		341391C623068859002A5035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341391C823068859002A5035 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				341391C823068859002A5035 /* HomeController.swift */,
 				3415AFB5230B778C003799E0 /* RegistrationController.swift */,
 				3419A07F230CC7E50087FD8B /* Bindable.swift */,
+				34070A7E230E0E38006FB397 /* SettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				341391DC230688F5002A5035 /* HomeBottomControlStackView.swift in Sources */,
 				3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */,
 				341391C723068859002A5035 /* AppDelegate.swift in Sources */,
+				34070A7F230E0E38006FB397 /* SettingsController.swift in Sources */,
 				341391DE2306890E002A5035 /* CardView.swift in Sources */,
 				3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */,
 				34A1C99A230A50940029315D /* User.swift in Sources */,
