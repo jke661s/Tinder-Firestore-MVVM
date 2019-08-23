@@ -25,6 +25,7 @@
 		3419A080230CC7E50087FD8B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419A07F230CC7E50087FD8B /* Bindable.swift */; };
 		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
+		3419FA80230F712800E00171 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419FA7F230F712800E00171 /* SettingsCell.swift */; };
 		34A1C99A230A50940029315D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1C999230A50940029315D /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		3419A07F230CC7E50087FD8B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
+		3419FA7F230F712800E00171 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		34A1C999230A50940029315D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53BA764CD8D0213BE95DE470 /* Pods-Tinder-Firestore-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		D3D85C25544D508DB2CB5656 /* Pods-Tinder-Firestore-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */,
 				341391DD2306890E002A5035 /* CardView.swift */,
 				3415AFB7230B8256003799E0 /* CustomTextField.swift */,
+				3419FA7F230F712800E00171 /* SettingsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				341391DE2306890E002A5035 /* CardView.swift in Sources */,
 				3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */,
 				34A1C99A230A50940029315D /* User.swift in Sources */,
+				3419FA80230F712800E00171 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
