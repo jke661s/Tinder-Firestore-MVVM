@@ -11,6 +11,10 @@ import Firebase
 import JGProgressHUD
 import SDWebImage
 
+protocol SettingsControllerDelegate {
+    func didSaveSettings()
+}
+
 class CustomImagePickerController: UIImagePickerController {
     var button: UIButton?
 }
@@ -51,6 +55,7 @@ class SettingsController: UITableViewController {
     }
     
     var user: User?
+    var delegate: SettingsControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +118,12 @@ class SettingsController: UITableViewController {
         navigationItem.title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave)), UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleCancel))]
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave)), UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))]
+    }
+    
+    @objc fileprivate func handleLogout() {
+        try? Auth.auth().signOut()
+        dismiss(animated: true)
     }
     
     @objc fileprivate func handleCancel() {
@@ -142,6 +152,9 @@ class SettingsController: UITableViewController {
                 print("Fail to save user settings:", err)
                 return
             }
+        }
+        self.dismiss(animated: true) {
+            self.delegate?.didSaveSettings()
         }
     }
 }
@@ -232,19 +245,23 @@ extension SettingsController {
     }
     
     @objc fileprivate func handleMinAgeChange(slider: UISlider) {
-        let indexPath = IndexPath(row: 0, section: 5)
-        guard let ageRangeCell = tableView.cellForRow(at: indexPath) as? AgeRangeCell else { return }
-        ageRangeCell.minLabel.text = "Min \(Int(slider.value))"
-        
-        self.user?.minSeekingAge = Int(slider.value)
+        evaluateMinMax()
     }
     
     @objc fileprivate func handleMaxAgeChange(slider: UISlider) {
-        let indexPath = IndexPath(row: 0, section: 5)
-        guard let ageRangeCell = tableView.cellForRow(at: indexPath) as? AgeRangeCell else { return }
-        ageRangeCell.maxLabel.text = "Max \(Int(slider.value))"
-        
-        self.user?.maxSeekingAge = Int(slider.value)
+        evaluateMinMax()
+    }
+    
+    fileprivate func evaluateMinMax() {
+        guard let ageRangeCell = tableView.cellForRow(at: [5, 0]) as? AgeRangeCell else { return }
+        let minValue = Int(ageRangeCell.minSlider.value)
+        var maxValue = Int(ageRangeCell.maxSlider.value)
+        maxValue = max(minValue, maxValue)
+        ageRangeCell.maxSlider.value = Float(maxValue)
+        ageRangeCell.minLabel.text = "Min \(minValue)"
+        ageRangeCell.maxLabel.text = "Max \(maxValue)"
+        self.user?.minSeekingAge = Int(ageRangeCell.minSlider.value)
+        self.user?.maxSeekingAge = Int(ageRangeCell.maxSlider.value)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

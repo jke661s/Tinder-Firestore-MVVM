@@ -14,6 +14,7 @@ class CustomTextField: UITextField {
     init(padding: CGFloat) {
         self.padding = padding
         super.init(frame: .zero)
+        backgroundColor = .white
         layer.cornerRadius = 25 
     }
     

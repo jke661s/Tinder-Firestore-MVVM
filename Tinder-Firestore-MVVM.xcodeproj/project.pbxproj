@@ -27,6 +27,8 @@
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
 		3419FA80230F712800E00171 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419FA7F230F712800E00171 /* SettingsCell.swift */; };
 		3448BEE3231358DB002DA5C3 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE2231358DB002DA5C3 /* AgeRangeCell.swift */; };
+		3448BEE62313A1FB002DA5C3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE52313A1FB002DA5C3 /* LoginController.swift */; };
+		3448BEE82313A208002DA5C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE72313A208002DA5C3 /* LoginViewModel.swift */; };
 		34A1C99A230A50940029315D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1C999230A50940029315D /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		3419FA7F230F712800E00171 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		3448BEE2231358DB002DA5C3 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
+		3448BEE52313A1FB002DA5C3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		3448BEE72313A208002DA5C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		34A1C999230A50940029315D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53BA764CD8D0213BE95DE470 /* Pods-Tinder-Firestore-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		D3D85C25544D508DB2CB5656 /* Pods-Tinder-Firestore-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		3419E6B1230A670200CE99B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3448BEE42313A0FB002DA5C3 /* Login */,
 				341391C823068859002A5035 /* HomeController.swift */,
 				3415AFB5230B778C003799E0 /* RegistrationController.swift */,
 				3419A07F230CC7E50087FD8B /* Bindable.swift */,
@@ -145,6 +150,15 @@
 				3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3448BEE42313A0FB002DA5C3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3448BEE52313A1FB002DA5C3 /* LoginController.swift */,
+				3448BEE72313A208002DA5C3 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		34A1C998230A50860029315D /* Model */ = {
@@ -326,9 +340,11 @@
 				3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */,
 				341391E12306893F002A5035 /* Extension+UIView.swift in Sources */,
 				3448BEE3231358DB002DA5C3 /* AgeRangeCell.swift in Sources */,
+				3448BEE82313A208002DA5C3 /* LoginViewModel.swift in Sources */,
 				341391DC230688F5002A5035 /* HomeBottomControlStackView.swift in Sources */,
 				3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */,
 				341391C723068859002A5035 /* AppDelegate.swift in Sources */,
+				3448BEE62313A1FB002DA5C3 /* LoginController.swift in Sources */,
 				34070A7F230E0E38006FB397 /* SettingsController.swift in Sources */,
 				341391DE2306890E002A5035 /* CardView.swift in Sources */,
 				3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */,

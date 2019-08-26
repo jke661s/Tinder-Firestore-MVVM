@@ -10,37 +10,68 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class HomeController: UIViewController {
+class HomeController: UIViewController, SettingsControllerDelegate {
     
     let topView = TopNavigationStackView()
     let bottomControls = HomeBottomControlStackView()
     let cardDeckView = UIView()
     var cardViewModels = [CardViewModel]()
     var lastUser: User?
+    fileprivate var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
         topView.settingButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
-        setupFirestoreUserCards()
-        fetchUsersFromFirestore()
+        fetchCurrentUser()
+//        setupFirestoreUserCards()
+//        fetchUsersFromFirestore()
+    }
+    deinit {
+        print("HomeController has been deinited")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard Auth.auth().currentUser == nil else { return }
+        let registrationController = RegistrationController()
+        let navController = UINavigationController(rootViewController: registrationController)
+        present(navController, animated: true)
     }
     
     // MARK:- Fileprivate
+    
+    func didSaveSettings() {
+        fetchCurrentUser()
+    }
+    
+    fileprivate func fetchCurrentUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+            
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+            self.fetchUsersFromFirestore()
+        }
+    }
     
     @objc fileprivate func handleRefresh() {
         fetchUsersFromFirestore()
     }
     
     fileprivate func fetchUsersFromFirestore() {
-        
+        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Fetching Users"
         hud.show(in: view)
         
-        let query = Firestore.firestore().collection("users").order(by: "uid").start(after: [lastUser?.uid ?? ""]).limit(to: 2)
-//        let query = Firestore.firestore().collection("users").whereField("age", isGreaterThan: 20).whereField("age", isLessThan: 30)
+        let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         query.getDocuments { (snapshot, err) in
             hud.dismiss()
             if let err = err {
@@ -60,6 +91,7 @@ class HomeController: UIViewController {
     
     @objc fileprivate func handleSettings() {
         let settingsController = SettingsController()
+        settingsController.delegate = self
         let navController = UINavigationController(rootViewController: settingsController)
         present(navController, animated: true)
     }
