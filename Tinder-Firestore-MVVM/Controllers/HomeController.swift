@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class HomeController: UIViewController, SettingsControllerDelegate {
+class HomeController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate, CardViewDelegate {
     
     let topView = TopNavigationStackView()
     let bottomControls = HomeBottomControlStackView()
@@ -37,17 +37,29 @@ class HomeController: UIViewController, SettingsControllerDelegate {
         
         guard Auth.auth().currentUser == nil else { return }
         let registrationController = RegistrationController()
+        registrationController.delegate = self
         let navController = UINavigationController(rootViewController: registrationController)
         present(navController, animated: true)
     }
     
     // MARK:- Fileprivate
     
+    func didTapMoreInfo() {
+        let userDetailsController = UserDetailsController()
+        
+        present(userDetailsController, animated: true, completion: nil)
+    }
+    
     func didSaveSettings() {
         fetchCurrentUser()
     }
     
+    func didFinishLoggingIn() {
+        fetchCurrentUser()
+    }
+    
     fileprivate func fetchCurrentUser() {
+        cardDeckView.subviews.forEach { $0.removeFromSuperview() }
         guard let uid = Auth.auth().currentUser?.uid else { return }
         Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
             if let err = err {
@@ -81,9 +93,12 @@ class HomeController: UIViewController, SettingsControllerDelegate {
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
-                self.lastUser = user
+//                self.lastUser = user
 //                self.cardViewModels.append(user.toCardViewModel()
-                self.setupCardsFromUser(user: user)
+                if user.uid != Auth.auth().currentUser?.uid {
+                    self.setupCardsFromUser(user: user)
+                }                
+                
             })
 //            self.setupFirestoreUserCards()
         }
@@ -118,6 +133,7 @@ class HomeController: UIViewController, SettingsControllerDelegate {
     
     fileprivate func setupCardsFromUser(user: User) {
         let cardView = CardView(frame: .zero)
+        cardView.delegate = self
         cardView.cardViewModel = user.toCardViewModel()
         cardDeckView.addSubview(cardView)
         cardDeckView.sendSubviewToBack(cardView)

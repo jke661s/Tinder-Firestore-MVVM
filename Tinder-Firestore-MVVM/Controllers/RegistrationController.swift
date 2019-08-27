@@ -71,6 +71,7 @@ class RegistrationController: UIViewController {
 
     let gradientLayer = CAGradientLayer()
     fileprivate let registeringHUD = JGProgressHUD(style: .dark)
+    var delegate: LoginControllerDelegate?
     
     
     override func viewDidLoad() {
@@ -233,6 +234,7 @@ class RegistrationController: UIViewController {
     
     @objc fileprivate func goToLogin() {
         let loginController = LoginController()
+        loginController.delegate = self.delegate
         navigationController?.pushViewController(loginController, animated: true)
     }
     

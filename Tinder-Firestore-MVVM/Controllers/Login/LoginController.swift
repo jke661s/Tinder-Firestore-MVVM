@@ -9,6 +9,10 @@
 import UIKit
 import JGProgressHUD
 
+protocol LoginControllerDelegate {
+    func didFinishLoggingIn()
+}
+
 class LoginController: UIViewController {
     
     let emailTextField: CustomTextField = {
@@ -36,6 +40,8 @@ class LoginController: UIViewController {
         sv.spacing = 8
         return sv
     }()
+    
+    var delegate: LoginControllerDelegate?
     
     @objc fileprivate func handleTextChange(textField: UITextField) {
         if textField == emailTextField {
@@ -67,8 +73,9 @@ class LoginController: UIViewController {
                 return
             }
             
-            print("Logged in successfully")
-            self.dismiss(animated: true)
+            self.dismiss(animated: true, completion: {
+                self.delegate?.didFinishLoggingIn()
+            })
         }
     }
     

@@ -22,6 +22,7 @@
 		3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFB7230B8256003799E0 /* CustomTextField.swift */; };
 		3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */; };
 		3415AFBE230BCBAF003799E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */; };
+		34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34160B2B231509C7008D13AE /* UserDetailsController.swift */; };
 		3419A080230CC7E50087FD8B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419A07F230CC7E50087FD8B /* Bindable.swift */; };
 		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
@@ -50,6 +51,7 @@
 		3415AFB7230B8256003799E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34160B2B231509C7008D13AE /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		3419A07F230CC7E50087FD8B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -131,9 +133,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		34160B2A231509B1008D13AE /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				34160B2B231509C7008D13AE /* UserDetailsController.swift */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
 		3419E6B1230A670200CE99B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				34160B2A231509B1008D13AE /* User Details */,
 				3448BEE42313A0FB002DA5C3 /* Login */,
 				341391C823068859002A5035 /* HomeController.swift */,
 				3415AFB5230B778C003799E0 /* RegistrationController.swift */,
@@ -291,6 +302,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -309,6 +321,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -332,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */,
 				3419A080230CC7E50087FD8B /* Bindable.swift in Sources */,
 				341391DA230688DE002A5035 /* TopNavigationStackView.swift in Sources */,
 				3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */,

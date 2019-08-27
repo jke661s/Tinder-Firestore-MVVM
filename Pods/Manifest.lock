@@ -115,6 +115,7 @@ PODS:
     - gRPC-Core (= 1.21.0)
     - gRPC-RxLibrary (= 1.21.0)
   - GTMSessionFetcher/Core (1.2.2)
+  - IQKeyboardManagerSwift (6.4.1)
   - JGProgressHUD (2.0.4)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
@@ -133,6 +134,7 @@ DEPENDENCIES:
   - Firebase/Firestore (~> 5.10.0)
   - Firebase/Storage (~> 5.10.0)
   - GoogleAppMeasurement (~> 5.2.0)
+  - IQKeyboardManagerSwift
   - JGProgressHUD (~> 2.0.3)
   - SDWebImage (~> 4.4.2)
 
@@ -155,6 +157,7 @@ SPEC REPOS:
     - gRPC-ProtoRPC
     - gRPC-RxLibrary
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - JGProgressHUD
     - leveldb-library
     - nanopb
@@ -179,12 +182,13 @@ SPEC CHECKSUMS:
   gRPC-ProtoRPC: fea7d2bb51ddd0ae6b5c5ea27033018f564084d0
   gRPC-RxLibrary: b0eb67f4f0f4c9cdfa6a73ea2b435a3efa77f1ef
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  IQKeyboardManagerSwift: d2df660d0b8d64a15cb2537c9ff303213fa515b2
   JGProgressHUD: 62658b14e72cccf179efc7a13bcb54d30b92fc22
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
 
-PODFILE CHECKSUM: 852c8637a0ee3dc1d2c0f8bd2fa287d175d37477
+PODFILE CHECKSUM: c0e0294acba6dc5010187ad3cead2c4421566ec1
 
 COCOAPODS: 1.6.1
