@@ -44,8 +44,9 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     // MARK:- Fileprivate
     
-    func didTapMoreInfo() {
+    func didTapMoreInfo(cardViewModel: CardViewModel) {
         let userDetailsController = UserDetailsController()
+        userDetailsController.cardViewModel = cardViewModel
         
         present(userDetailsController, animated: true, completion: nil)
     }
