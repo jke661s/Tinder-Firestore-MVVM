@@ -31,6 +31,7 @@
 		3448BEE62313A1FB002DA5C3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE52313A1FB002DA5C3 /* LoginController.swift */; };
 		3448BEE82313A208002DA5C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE72313A208002DA5C3 /* LoginViewModel.swift */; };
 		34A1C99A230A50940029315D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A1C999230A50940029315D /* User.swift */; };
+		34ECD8E223179A480088985E /* SwipingPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ECD8E123179A480088985E /* SwipingPhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		3448BEE52313A1FB002DA5C3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		3448BEE72313A208002DA5C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		34A1C999230A50940029315D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		34ECD8E123179A480088985E /* SwipingPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhotoController.swift; sourceTree = "<group>"; };
 		53BA764CD8D0213BE95DE470 /* Pods-Tinder-Firestore-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		D3D85C25544D508DB2CB5656 /* Pods-Tinder-Firestore-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Firestore-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Tinder-Firestore-MVVM/Pods-Tinder-Firestore-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				34160B2B231509C7008D13AE /* UserDetailsController.swift */,
+				34ECD8E123179A480088985E /* SwipingPhotoController.swift */,
 			);
 			path = "User Details";
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */,
 				3419A080230CC7E50087FD8B /* Bindable.swift in Sources */,
+				34ECD8E223179A480088985E /* SwipingPhotoController.swift in Sources */,
 				341391DA230688DE002A5035 /* TopNavigationStackView.swift in Sources */,
 				3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */,
 				3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */,

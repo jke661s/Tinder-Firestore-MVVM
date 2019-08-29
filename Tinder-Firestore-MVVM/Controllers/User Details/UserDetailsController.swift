@@ -68,8 +68,8 @@ class UserDetailsController: UIViewController, UIScrollViewDelegate {
         stackView.distribution = .fillEqually
 //        stackView.axis = .horizontal
         view.addSubview(stackView)
-        stackView.backgroundColor = .red
-        stackView.setConstraint(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+        stackView.spacing = -36
+        stackView.setConstraint(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 300, height: 80))
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     

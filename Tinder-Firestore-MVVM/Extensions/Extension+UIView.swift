@@ -46,7 +46,7 @@ extension UIView {
             heightAnchor.constraint(equalToConstant: size.height).isActive = true
         }
         if size.width != 0 {
-            widthAnchor.constraint(equalToConstant: size.height).isActive = true
+            widthAnchor.constraint(equalToConstant: size.width).isActive = true
         }
     }
     
