@@ -16,7 +16,8 @@ protocol CardViewDelegate {
 class CardView: UIView {
     
     // Views
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+    var nextCardView: CardView?
+    fileprivate let swipingPhotosController = SwipingPhotosController(isCardViewMode: true)
     fileprivate let barStackView = UIStackView()
     fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let informationLabel = UILabel()
@@ -31,10 +32,7 @@ class CardView: UIView {
     // View Model
     var cardViewModel: CardViewModel! {
         didSet {
-            let imageName = cardViewModel.imageUrls.first ?? ""
-            if let url = URL(string: imageName) {
-                imageView.sd_setImage(with: url)
-            }
+            swipingPhotosController.cardViewModel = cardViewModel
             informationLabel.attributedText = cardViewModel.attributedString
             informationLabel.textAlignment = cardViewModel.textAlignment
             (0..<cardViewModel.imageUrls.count).forEach { (_) in
@@ -83,9 +81,9 @@ class CardView: UIView {
                 v.backgroundColor = UIColor(white: 0, alpha: 0.1)
             })
             self.barStackView.arrangedSubviews[imageIndex].backgroundColor = .white
-            if let url = URL(string: imageUrl ?? "") {
-            self.imageView.sd_setImage(with: url)
-            }
+//            if let url = URL(string: imageUrl ?? "") {
+//            self.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground, completed: nil)
+//            }
         }
     }
     
@@ -93,11 +91,11 @@ class CardView: UIView {
         layer.cornerRadius = 10
         clipsToBounds = true
         
-        imageView.contentMode = .scaleAspectFill
-        addSubview(imageView)
-        imageView.fillSuperView()
+        let swipingPhotosView = swipingPhotosController.view!
+        addSubview(swipingPhotosView)
+        swipingPhotosView.fillSuperView()
         
-        setupBarStackView()
+//        setupBarStackView()
         
         setupGradientLayer()
         

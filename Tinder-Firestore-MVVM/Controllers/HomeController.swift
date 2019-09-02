@@ -24,6 +24,8 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         setupLayout()
         topView.settingButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+        bottomControls.likeButton.addTarget(self, action: #selector(handleLike), for: .touchUpInside)
+        
         fetchCurrentUser()
 //        setupFirestoreUserCards()
 //        fetchUsersFromFirestore()
@@ -78,11 +80,24 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         fetchUsersFromFirestore()
     }
     
+    @objc fileprivate func handleLike() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+            self.topCardView?.frame = CGRect(x: 600, y: 0, width: self.topCardView?.frame.width, height: self.topCardView?.frame.height)
+        }, completion: { (_) in
+            self.topCardView?.removeFromSuperview()
+        })
+        
+        topCardView = topCardView?.nextCardView
+    }
+    
+    fileprivate var topCardView: CardView?
+    
     fileprivate func fetchUsersFromFirestore() {
-        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Fetching Users"
         hud.show(in: view)
+        let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
+        let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
         
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         query.getDocuments { (snapshot, err) in
@@ -91,17 +106,24 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
                 print("Failed to fetch users: ", err)
                 return
             }
+            
+            // Linked list
+            var prevCardView: CardView?
+            
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
-//                self.lastUser = user
-//                self.cardViewModels.append(user.toCardViewModel()
                 if user.uid != Auth.auth().currentUser?.uid {
-                    self.setupCardsFromUser(user: user)
-                }                
-                
+                    let cardView = self.setupCardsFromUser(user: user)
+                    
+                    prevCardView?.nextCardView = cardView
+                    prevCardView = cardView
+                    
+                    if self.topCardView == nil {
+                        self.topCardView = cardView
+                    }
+                }
             })
-//            self.setupFirestoreUserCards()
         }
     }
     
@@ -132,13 +154,15 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         }
     }
     
-    fileprivate func setupCardsFromUser(user: User) {
+    fileprivate func setupCardsFromUser(user: User) -> CardView {
         let cardView = CardView(frame: .zero)
         cardView.delegate = self
         cardView.cardViewModel = user.toCardViewModel()
         cardDeckView.addSubview(cardView)
         cardDeckView.sendSubviewToBack(cardView)
         cardView.fillSuperView()
+        
+        return cardView
     }
     
 }

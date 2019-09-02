@@ -252,6 +252,9 @@ extension SettingsController {
         evaluateMinMax()
     }
     
+    static let defaultMinSeekingAge = 18
+    static let defaultMaxSeekingAge = 50
+    
     fileprivate func evaluateMinMax() {
         guard let ageRangeCell = tableView.cellForRow(at: [5, 0]) as? AgeRangeCell else { return }
         let minValue = Int(ageRangeCell.minSlider.value)
@@ -271,11 +274,13 @@ extension SettingsController {
             ageRangeCell.minSlider.addTarget(self, action: #selector(handleMinAgeChange), for: .valueChanged)
             ageRangeCell.maxSlider.addTarget(self, action: #selector(handleMaxAgeChange), for: .valueChanged)
             
-            ageRangeCell.minLabel.text = "Min \(user?.minSeekingAge ?? -1)"
-            ageRangeCell.maxLabel.text = "Min \(user?.maxSeekingAge ?? -1)"
+            let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
+            let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
+            ageRangeCell.minLabel.text = "Min \(minAge)"
+            ageRangeCell.maxLabel.text = "Min \(maxAge)"
             
-            ageRangeCell.minSlider.setValue(Float(user?.minSeekingAge ?? -1), animated: false)
-            ageRangeCell.maxSlider.setValue(Float(user?.maxSeekingAge ?? -1), animated: false)
+            ageRangeCell.minSlider.setValue(Float(minAge), animated: false)
+            ageRangeCell.maxSlider.setValue(Float(maxAge), animated: false)
             return ageRangeCell
         }
         
