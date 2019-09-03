@@ -11,6 +11,9 @@ import SDWebImage
 
 protocol CardViewDelegate {
     func didTapMoreInfo(cardViewModel: CardViewModel)
+    func didRemoveCardView(cardView: CardView)
+    func didSwipeLeft()
+    func didSwipeRight()
 }
 
 class CardView: UIView {
@@ -140,17 +143,26 @@ class CardView: UIView {
     fileprivate func handleEnded(_ gesture: UIPanGestureRecognizer) {
         let translationDirection: CGFloat = gesture.translation(in: nil).x > 0 ? 1 : -1
         let shouldDismissCard = abs(gesture.translation(in: nil).x) > 100
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-            if shouldDismissCard {
-                self.frame = CGRect(x: 600 * translationDirection, y: 0, width: self.frame.width, height: self.frame.height)
+        
+        if shouldDismissCard {
+            // hack solution
+//            guard let homeController = self.delegate as? HomeController else { return }
+//            if translationDirection == 1 {
+//                homeController.handleLike()
+//            } else {
+//                homeController.handleDislike()
+//            }
+            
+            if translationDirection == 1 {
+                self.delegate?.didSwipeRight()
             } else {
+                self.delegate?.didSwipeLeft()
+            }
+            
+        } else {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
                 self.transform = .identity
-            }
-        }) { (_) in
-            self.transform = .identity
-            if shouldDismissCard {
-                self.removeFromSuperview()
-            }
+            }, completion: nil)
         }
     }
     

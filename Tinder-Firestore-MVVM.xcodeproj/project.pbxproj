@@ -27,6 +27,7 @@
 		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
 		3419FA80230F712800E00171 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419FA7F230F712800E00171 /* SettingsCell.swift */; };
+		34219615231E31B000BAD14C /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34219614231E31B000BAD14C /* MatchView.swift */; };
 		3448BEE3231358DB002DA5C3 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE2231358DB002DA5C3 /* AgeRangeCell.swift */; };
 		3448BEE62313A1FB002DA5C3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE52313A1FB002DA5C3 /* LoginController.swift */; };
 		3448BEE82313A208002DA5C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3448BEE72313A208002DA5C3 /* LoginViewModel.swift */; };
@@ -57,6 +58,7 @@
 		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		3419FA7F230F712800E00171 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		34219614231E31B000BAD14C /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		3448BEE2231358DB002DA5C3 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 		3448BEE52313A1FB002DA5C3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		3448BEE72313A208002DA5C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				3415AFB7230B8256003799E0 /* CustomTextField.swift */,
 				3419FA7F230F712800E00171 /* SettingsCell.swift */,
 				3448BEE2231358DB002DA5C3 /* AgeRangeCell.swift */,
+				34219614231E31B000BAD14C /* MatchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				3419A080230CC7E50087FD8B /* Bindable.swift in Sources */,
 				34ECD8E223179A480088985E /* SwipingPhotoController.swift in Sources */,
 				341391DA230688DE002A5035 /* TopNavigationStackView.swift in Sources */,
+				34219615231E31B000BAD14C /* MatchView.swift in Sources */,
 				3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */,
 				3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */,
 				341391C923068859002A5035 /* HomeController.swift in Sources */,
