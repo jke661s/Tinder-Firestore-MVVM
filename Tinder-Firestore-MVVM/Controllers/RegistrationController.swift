@@ -122,7 +122,10 @@ class RegistrationController: UIViewController {
                 self.showHUDWithError(error: err)
                 return
             }
-            print("Finished registering our user")
+            
+            self.dismiss(animated: true, completion: {
+                self.delegate?.didFinishLoggingIn()
+            })
         }
     }
     

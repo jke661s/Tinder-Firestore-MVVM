@@ -23,6 +23,9 @@
 		3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */; };
 		3415AFBE230BCBAF003799E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */; };
 		34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34160B2B231509C7008D13AE /* UserDetailsController.swift */; };
+		34189597231F3427008F53B9 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34189596231F3427008F53B9 /* SendMessageButton.swift */; };
+		34189599231F37D1008F53B9 /* KeepSwipingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34189598231F37D1008F53B9 /* KeepSwipingButton.swift */; };
+		3418959C231F698F008F53B9 /* MatchesMessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3418959B231F698F008F53B9 /* MatchesMessagesController.swift */; };
 		3419A080230CC7E50087FD8B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419A07F230CC7E50087FD8B /* Bindable.swift */; };
 		3419E6B4230A67A800CE99B1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B3230A67A800CE99B1 /* CardViewModel.swift */; };
 		3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */; };
@@ -54,6 +57,9 @@
 		3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34160B2B231509C7008D13AE /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
+		34189596231F3427008F53B9 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
+		34189598231F37D1008F53B9 /* KeepSwipingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSwipingButton.swift; sourceTree = "<group>"; };
+		3418959B231F698F008F53B9 /* MatchesMessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesMessagesController.swift; sourceTree = "<group>"; };
 		3419A07F230CC7E50087FD8B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		3419E6B3230A67A800CE99B1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		3419E6B5230A6E8A00CE99B1 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				3419FA7F230F712800E00171 /* SettingsCell.swift */,
 				3448BEE2231358DB002DA5C3 /* AgeRangeCell.swift */,
 				34219614231E31B000BAD14C /* MatchView.swift */,
+				34189596231F3427008F53B9 /* SendMessageButton.swift */,
+				34189598231F37D1008F53B9 /* KeepSwipingButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,9 +155,18 @@
 			path = "User Details";
 			sourceTree = "<group>";
 		};
+		3418959A231F6973008F53B9 /* MatchesMessages */ = {
+			isa = PBXGroup;
+			children = (
+				3418959B231F698F008F53B9 /* MatchesMessagesController.swift */,
+			);
+			path = MatchesMessages;
+			sourceTree = "<group>";
+		};
 		3419E6B1230A670200CE99B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3418959A231F6973008F53B9 /* MatchesMessages */,
 				34160B2A231509B1008D13AE /* User Details */,
 				3448BEE42313A0FB002DA5C3 /* Login */,
 				341391C823068859002A5035 /* HomeController.swift */,
@@ -352,14 +369,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */,
+				34189599231F37D1008F53B9 /* KeepSwipingButton.swift in Sources */,
 				3419A080230CC7E50087FD8B /* Bindable.swift in Sources */,
 				34ECD8E223179A480088985E /* SwipingPhotoController.swift in Sources */,
 				341391DA230688DE002A5035 /* TopNavigationStackView.swift in Sources */,
 				34219615231E31B000BAD14C /* MatchView.swift in Sources */,
 				3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */,
 				3415AFB8230B8256003799E0 /* CustomTextField.swift in Sources */,
+				34189597231F3427008F53B9 /* SendMessageButton.swift in Sources */,
 				341391C923068859002A5035 /* HomeController.swift in Sources */,
 				3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */,
+				3418959C231F698F008F53B9 /* MatchesMessagesController.swift in Sources */,
 				341391E12306893F002A5035 /* Extension+UIView.swift in Sources */,
 				3448BEE3231358DB002DA5C3 /* AgeRangeCell.swift in Sources */,
 				3448BEE82313A208002DA5C3 /* LoginViewModel.swift in Sources */,

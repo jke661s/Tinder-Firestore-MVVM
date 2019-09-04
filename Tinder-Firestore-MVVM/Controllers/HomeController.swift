@@ -23,6 +23,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         super.viewDidLoad()
         setupLayout()
         topView.settingButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+        topView.messageButton.addTarget(self, action: #selector(handleMessage), for: .touchUpInside)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         bottomControls.likeButton.addTarget(self, action: #selector(handleLike), for: .touchUpInside)
         bottomControls.dislikeButton.addTarget(self, action: #selector(handleDislike), for: .touchUpInside)
@@ -107,6 +108,12 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         }
     }
     
+    @objc fileprivate func handleMessage() {
+        let vc = MatchesMessagesController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc fileprivate func handleRefresh() {
         fetchUsersFromFirestore()
     }
@@ -174,6 +181,8 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     fileprivate func presentMatchView(cardUID: String) {
         let matchView = MatchView()
+        matchView.currentUser = user
+        matchView.cardUID = cardUID
         view.addSubview(matchView)
         matchView.fillSuperView()
     }
@@ -258,6 +267,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     }
     
     fileprivate func setupLayout() {
+        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
         let overallStackView = UIStackView(arrangedSubviews: [topView, cardDeckView, bottomControls])
         overallStackView.axis = .vertical
