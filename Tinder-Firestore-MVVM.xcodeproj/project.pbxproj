@@ -23,6 +23,7 @@
 		3415AFBC230BBF03003799E0 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */; };
 		3415AFBE230BCBAF003799E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */; };
 		34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34160B2B231509C7008D13AE /* UserDetailsController.swift */; };
+		3417461C2321E189004BE248 /* MatchesNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417461B2321E189004BE248 /* MatchesNavBar.swift */; };
 		34189597231F3427008F53B9 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34189596231F3427008F53B9 /* SendMessageButton.swift */; };
 		34189599231F37D1008F53B9 /* KeepSwipingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34189598231F37D1008F53B9 /* KeepSwipingButton.swift */; };
 		3418959C231F698F008F53B9 /* MatchesMessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3418959B231F698F008F53B9 /* MatchesMessagesController.swift */; };
@@ -57,6 +58,7 @@
 		3415AFBB230BBF03003799E0 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34160B2B231509C7008D13AE /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
+		3417461B2321E189004BE248 /* MatchesNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesNavBar.swift; sourceTree = "<group>"; };
 		34189596231F3427008F53B9 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
 		34189598231F37D1008F53B9 /* KeepSwipingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSwipingButton.swift; sourceTree = "<group>"; };
 		3418959B231F698F008F53B9 /* MatchesMessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesMessagesController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				34219614231E31B000BAD14C /* MatchView.swift */,
 				34189596231F3427008F53B9 /* SendMessageButton.swift */,
 				34189598231F37D1008F53B9 /* KeepSwipingButton.swift */,
+				3417461B2321E189004BE248 /* MatchesNavBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				3448BEE62313A1FB002DA5C3 /* LoginController.swift in Sources */,
 				34070A7F230E0E38006FB397 /* SettingsController.swift in Sources */,
 				341391DE2306890E002A5035 /* CardView.swift in Sources */,
+				3417461C2321E189004BE248 /* MatchesNavBar.swift in Sources */,
 				3415AFB6230B778C003799E0 /* RegistrationController.swift in Sources */,
 				34A1C99A230A50940029315D /* User.swift in Sources */,
 				3419FA80230F712800E00171 /* SettingsCell.swift in Sources */,
