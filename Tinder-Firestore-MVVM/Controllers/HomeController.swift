@@ -18,6 +18,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     var cardViewModels = [CardViewModel]()
     var lastUser: User?
     fileprivate var user: User?
+    var users = [String: User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,8 +175,35 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
             let hasMatched = data[uid] as? Int == 1
             if hasMatched {
                 self.presentMatchView(cardUID: cardUID)
+                
+                guard let cardUser = self.users[cardUID] else { return }
+                
+                let data = ["name": cardUser.name ?? "", "profileImageUrl": cardUser.imageUrl1 ?? "", "uid": cardUID, "timestamp": ]
+                Firestore.firestore().collection("matches_messages")
+                    .document(uid).collection("matches")
+                    .document(cardUID)
+                    .setData(data, completion: { (err) in
+                        if let err = err {
+                        print(err)
+                        return
+                    }
+                })
+                
+                guard let currentUser = self.user else { return }
+                
+                let otherMatchData = ["name": currentUser.name ?? "", "profileImageUrl": currentUser.imageUrl1 ?? "", "uid": uid]
+                Firestore.firestore().collection("matches_messages")
+                    .document(cardUID).collection("matches")
+                    .document(uid)
+                    .setData(otherMatchData, completion: { (err) in
+                        if let err = err {
+                            print(err)
+                            return
+                        }
+                    })
+                
+                
             }
-            
         }
     }
     
@@ -225,7 +253,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
         let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
         
-        let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
+        let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge).limit(to: 10)
         query.getDocuments { (snapshot, err) in
             hud.dismiss()
             if let err = err {
@@ -237,9 +265,12 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
             // Linked list
             var prevCardView: CardView?
             
+            
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
+                
+                self.users[user.uid ?? ""] = user
                 
                 let isNotCurrentUser = user.uid != Auth.auth().currentUser?.uid
 //                let hasNotSwipedBefore = self.swipes[user.uid!] == nil
