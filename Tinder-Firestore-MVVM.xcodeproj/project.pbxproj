@@ -24,6 +24,7 @@
 		3415AFBE230BCBAF003799E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */; };
 		34160B2C231509C7008D13AE /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34160B2B231509C7008D13AE /* UserDetailsController.swift */; };
 		3417461C2321E189004BE248 /* MatchesNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417461B2321E189004BE248 /* MatchesNavBar.swift */; };
+		3417AF84233B36C000BCC6C4 /* MessagesNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417AF83233B36C000BCC6C4 /* MessagesNavBar.swift */; };
 		34189597231F3427008F53B9 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34189596231F3427008F53B9 /* SendMessageButton.swift */; };
 		34189599231F37D1008F53B9 /* KeepSwipingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34189598231F37D1008F53B9 /* KeepSwipingButton.swift */; };
 		3418959C231F698F008F53B9 /* MatchesMessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3418959B231F698F008F53B9 /* MatchesMessagesController.swift */; };
@@ -60,6 +61,7 @@
 		3415AFBD230BCBAE003799E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34160B2B231509C7008D13AE /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		3417461B2321E189004BE248 /* MatchesNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesNavBar.swift; sourceTree = "<group>"; };
+		3417AF83233B36C000BCC6C4 /* MessagesNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesNavBar.swift; sourceTree = "<group>"; };
 		34189596231F3427008F53B9 /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
 		34189598231F37D1008F53B9 /* KeepSwipingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSwipingButton.swift; sourceTree = "<group>"; };
 		3418959B231F698F008F53B9 /* MatchesMessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesMessagesController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		341391D8230688BD002A5035 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3417AF82233B36A500BCC6C4 /* MatchesMessages */,
 				341391D9230688DD002A5035 /* TopNavigationStackView.swift */,
 				341391DB230688F5002A5035 /* HomeBottomControlStackView.swift */,
 				341391DD2306890E002A5035 /* CardView.swift */,
@@ -158,6 +161,14 @@
 				34ECD8E123179A480088985E /* SwipingPhotoController.swift */,
 			);
 			path = "User Details";
+			sourceTree = "<group>";
+		};
+		3417AF82233B36A500BCC6C4 /* MatchesMessages */ = {
+			isa = PBXGroup;
+			children = (
+				3417AF83233B36C000BCC6C4 /* MessagesNavBar.swift */,
+			);
+			path = MatchesMessages;
 			sourceTree = "<group>";
 		};
 		3418959A231F6973008F53B9 /* MatchesMessages */ = {
@@ -385,6 +396,7 @@
 				34189597231F3427008F53B9 /* SendMessageButton.swift in Sources */,
 				341391C923068859002A5035 /* HomeController.swift in Sources */,
 				3419E6B6230A6E8A00CE99B1 /* Advertiser.swift in Sources */,
+				3417AF84233B36C000BCC6C4 /* MessagesNavBar.swift in Sources */,
 				3418959C231F698F008F53B9 /* MatchesMessagesController.swift in Sources */,
 				341391E12306893F002A5035 /* Extension+UIView.swift in Sources */,
 				3448BEE3231358DB002DA5C3 /* AgeRangeCell.swift in Sources */,
