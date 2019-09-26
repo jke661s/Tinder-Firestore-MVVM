@@ -24,12 +24,23 @@ class MessageCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 class ChatLogController: UICollectionViewController {
     
     fileprivate let customNavBar = MessagesNavBar()
     fileprivate let navBarHeight: CGFloat = 120
+    fileprivate let match: Match
+    
+    init(match: Match) {
+        super.init()
+        self.match = match
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
