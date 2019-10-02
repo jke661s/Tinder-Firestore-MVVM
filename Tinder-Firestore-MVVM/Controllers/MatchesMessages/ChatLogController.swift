@@ -34,8 +34,8 @@ class ChatLogController: UICollectionViewController {
     fileprivate let match: Match
     
     init(match: Match) {
-        super.init()
         self.match = match
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
     
     required init?(coder: NSCoder) {
@@ -85,4 +85,5 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
         
         return cell
     }
+    
 }

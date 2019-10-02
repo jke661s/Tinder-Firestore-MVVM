@@ -144,7 +144,9 @@ extension MatchesMessagesController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        let match = matchList[indexPath.item]
+        let chatLogController = ChatLogController(match: match)
         
         navigationController?.pushViewController(chatLogController, animated: true)
     }
