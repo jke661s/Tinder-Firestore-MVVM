@@ -43,8 +43,14 @@ class MessagesNavBar: UIView {
         return button
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    fileprivate let match: Match
+    
+    init(match: Match) {
+        self.match = match
+        
+        nameLabel.text = match.name
+        
+        super.init(frame: .zero)
         backgroundColor = .white
         layer.shadowColor = UIColor(white: 0, alpha: 0.3).cgColor
         layer.shadowOffset = CGSize(width: 0, height: 10)

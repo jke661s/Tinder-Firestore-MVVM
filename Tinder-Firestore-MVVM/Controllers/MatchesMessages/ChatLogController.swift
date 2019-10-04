@@ -29,7 +29,7 @@ class MessageCell: UICollectionViewCell {
 
 class ChatLogController: UICollectionViewController {
     
-    fileprivate let customNavBar = MessagesNavBar()
+    fileprivate lazy var customNavBar = MessagesNavBar(match: match)
     fileprivate let navBarHeight: CGFloat = 120
     fileprivate let match: Match
     
